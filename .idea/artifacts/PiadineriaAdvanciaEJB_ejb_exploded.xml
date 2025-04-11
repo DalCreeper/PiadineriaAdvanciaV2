@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ejb" name="PiadineriaAdvanciaEJB:ejb exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/PiadineriaAdvanciaEJB_ejb_exploded</output-path>
+    <root id="root">
+      <element id="module-output" name="PiadineriaAdvanciaEJB" />
+      <element id="javaee-facet-resources" facet="PiadineriaAdvanciaEJB/ejb/EJB" />
+    </root>
+  </artifact>
+</component>
