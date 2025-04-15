@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<%@ page import="com.advancia.PiadineriaAdvanciaWEB.domain.model.classes.Employee"%>
-<%@ page import="com.advancia.PiadineriaAdvanciaWEB.domain.model.classes.Piadina"%>
-<%@ page import="com.advancia.PiadineriaAdvanciaWEB.domain.model.classes.Dough"%>
-<%@ page import="com.advancia.PiadineriaAdvanciaWEB.domain.model.classes.MeatBase"%>
-<%@ page import="com.advancia.PiadineriaAdvanciaWEB.domain.model.classes.Sauces"%>
-<%@ page import="com.advancia.PiadineriaAdvanciaWEB.domain.model.classes.OptionalElements"%>
+<%@ page import="com.advancia.PiadineriaAdvanciaEJB.domain.model.classes.EmployeeEJB"%>
+<%@ page import="com.advancia.PiadineriaAdvanciaEJB.domain.model.classes.PiadinaEJB"%>
+<%@ page import="com.advancia.PiadineriaAdvanciaEJB.domain.model.classes.MeatBaseEJB"%>
+<%@ page import="com.advancia.PiadineriaAdvanciaEJB.domain.model.classes.SaucesEJB"%>
+<%@ page import="com.advancia.PiadineriaAdvanciaEJB.domain.model.classes.OptionalElementsEJB"%>
 <%@ page import="java.util.List"%>
-<%@ page import="java.util.Arrays"%>
 <%@ page import="java.util.stream.Collectors"%>
 <html lang="en">
 <head>
@@ -25,7 +23,7 @@
 		<div class="flex-fill">
 			<h1 class="prevent-select">Menu Management - Piadineria Advancia EJB</h1>
 			<%
-				Employee user = (session != null) ? (Employee) session.getAttribute("user") : null;
+				EmployeeEJB user = (session != null) ? (EmployeeEJB) session.getAttribute("user") : null;
 				if(user != null) {
 			%>
 			<h3 class="prevent-select">
@@ -56,16 +54,16 @@
 					</thead>
 					<tbody id="menuTableBody">
 						<%
-							List<Piadina> piadinas = (List<Piadina>) request.getAttribute("piadinas");
+							List<PiadinaEJB> piadinas = (List<PiadinaEJB>) request.getAttribute("piadinas");
 							if(piadinas != null) {
-								for(Piadina piadinaEJB : piadinas) {
+								for(PiadinaEJB piadinaEJB : piadinas) {
 						%>
 									<tr>
 										<td class="col align-middle" id=""><%= piadinaEJB.getName() %></td>
 										<td class="col align-middle"><%= piadinaEJB.getDough().getType() %></td>
-										<td class="col align-middle"><%= piadinaEJB.getMeatBase().stream().map(MeatBase::getType).collect(Collectors.joining(", ")) %></td>
-										<td class="col align-middle"><%= piadinaEJB.getSauces().stream().map(Sauces::getType).collect(Collectors.joining(", ")) %></td>
-										<td class="col align-middle"><%= piadinaEJB.getOptionalElements().stream().map(OptionalElements::getType).collect(Collectors.joining(", ")) %></td>
+										<td class="col align-middle"><%= piadinaEJB.getMeatBase().stream().map(MeatBaseEJB::getType).collect(Collectors.joining(", ")) %></td>
+										<td class="col align-middle"><%= piadinaEJB.getSauces().stream().map(SaucesEJB::getType).collect(Collectors.joining(", ")) %></td>
+										<td class="col align-middle"><%= piadinaEJB.getOptionalElements().stream().map(OptionalElementsEJB::getType).collect(Collectors.joining(", ")) %></td>
 										<td class="col align-middle text-nowrap"><%= String.format("&euro; %.2f", piadinaEJB.getPrice()) %></td>
 										<td class="col align-middle"><%= piadinaEJB.getEmployee().getName() + " " + piadinaEJB.getEmployee().getSurname() %></td>
 										<td class="col align-middle">
