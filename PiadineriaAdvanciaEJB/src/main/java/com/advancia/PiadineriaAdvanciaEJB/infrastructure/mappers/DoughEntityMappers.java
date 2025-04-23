@@ -1,7 +1,7 @@
 package com.advancia.PiadineriaAdvanciaEJB.infrastructure.mappers;
 
-import com.advancia.PiadineriaAdvanciaEJB.domain.model.classes.DoughEJB;
-import com.advancia.PiadineriaAdvanciaEJB.infrastructure.model.classes.DoughEntity;
+import com.advancia.PiadineriaAdvanciaEJB.domain.model.DoughEJB;
+import com.advancia.PiadineriaAdvanciaEJB.infrastructure.model.DoughEntity;
 import org.mapstruct.Mapper;
 
 @Mapper

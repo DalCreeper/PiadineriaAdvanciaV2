@@ -1,14 +1,10 @@
 package com.advancia.PiadineriaAdvanciaEJB.infrastructure.dao.piadinacomponents;
 
 import com.advancia.PiadineriaAdvanciaEJB.domain.exceptions.DBException;
-import com.advancia.PiadineriaAdvanciaEJB.domain.model.classes.DoughEJB;
-import com.advancia.PiadineriaAdvanciaEJB.domain.model.classes.MeatBaseEJB;
-import com.advancia.PiadineriaAdvanciaEJB.domain.model.classes.OptionalElementsEJB;
-import com.advancia.PiadineriaAdvanciaEJB.domain.model.classes.SaucesEJB;
-import com.advancia.PiadineriaAdvanciaEJB.infrastructure.model.classes.DoughEntity;
-import com.advancia.PiadineriaAdvanciaEJB.infrastructure.model.classes.MeatBaseEntity;
-import com.advancia.PiadineriaAdvanciaEJB.infrastructure.model.classes.OptionalElementsEntity;
-import com.advancia.PiadineriaAdvanciaEJB.infrastructure.model.classes.SaucesEntity;
+import com.advancia.PiadineriaAdvanciaEJB.infrastructure.model.DoughEntity;
+import com.advancia.PiadineriaAdvanciaEJB.infrastructure.model.MeatBaseEntity;
+import com.advancia.PiadineriaAdvanciaEJB.infrastructure.model.OptionalElementsEntity;
+import com.advancia.PiadineriaAdvanciaEJB.infrastructure.model.SaucesEntity;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;

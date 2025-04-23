@@ -1,7 +1,7 @@
 package com.advancia.PiadineriaAdvanciaEJB.infrastructure.dao.piadinacomponents;
 
 import com.advancia.PiadineriaAdvanciaEJB.domain.exceptions.DBException;
-import com.advancia.PiadineriaAdvanciaEJB.infrastructure.model.classes.MeatBaseEntity;
+import com.advancia.PiadineriaAdvanciaEJB.infrastructure.model.MeatBaseEntity;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;

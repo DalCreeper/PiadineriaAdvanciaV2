@@ -1,9 +1,5 @@
 <!DOCTYPE html>
-<%@ page import="com.advancia.PiadineriaAdvanciaEJB.domain.model.classes.EmployeeEJB"%>
-<%@ page import="com.advancia.PiadineriaAdvanciaEJB.domain.model.classes.PiadinaEJB"%>
-<%@ page import="com.advancia.PiadineriaAdvanciaEJB.domain.model.classes.MeatBaseEJB"%>
-<%@ page import="com.advancia.PiadineriaAdvanciaEJB.domain.model.classes.SaucesEJB"%>
-<%@ page import="com.advancia.PiadineriaAdvanciaEJB.domain.model.classes.OptionalElementsEJB"%>
+<%@ page import="com.advancia.PiadineriaAdvanciaWEB.application.model.*"%>
 <%@ page import="java.util.List"%>
 <%@ page import="java.util.stream.Collectors"%>
 <html lang="en">
@@ -23,7 +19,7 @@
 		<div class="flex-fill">
 			<h1 class="prevent-select">Menu Management - Piadineria Advancia EJB</h1>
 			<%
-				EmployeeEJB user = (session != null) ? (EmployeeEJB) session.getAttribute("user") : null;
+				Employee user = (session != null) ? (Employee) session.getAttribute("user") : null;
 				if(user != null) {
 			%>
 			<h3 class="prevent-select">
@@ -54,21 +50,21 @@
 					</thead>
 					<tbody id="menuTableBody">
 						<%
-							List<PiadinaEJB> piadinas = (List<PiadinaEJB>) request.getAttribute("piadinas");
+							List<Piadina> piadinas = (List<Piadina>) request.getAttribute("piadinas");
 							if(piadinas != null) {
-								for(PiadinaEJB piadinaEJB : piadinas) {
+								for(Piadina piadina : piadinas) {
 						%>
 									<tr>
-										<td class="col align-middle" id=""><%= piadinaEJB.getName() %></td>
-										<td class="col align-middle"><%= piadinaEJB.getDough().getType() %></td>
-										<td class="col align-middle"><%= piadinaEJB.getMeatBase().stream().map(MeatBaseEJB::getType).collect(Collectors.joining(", ")) %></td>
-										<td class="col align-middle"><%= piadinaEJB.getSauces().stream().map(SaucesEJB::getType).collect(Collectors.joining(", ")) %></td>
-										<td class="col align-middle"><%= piadinaEJB.getOptionalElements().stream().map(OptionalElementsEJB::getType).collect(Collectors.joining(", ")) %></td>
-										<td class="col align-middle text-nowrap"><%= String.format("&euro; %.2f", piadinaEJB.getPrice()) %></td>
-										<td class="col align-middle"><%= piadinaEJB.getEmployee().getName() + " " + piadinaEJB.getEmployee().getSurname() %></td>
+										<td class="col align-middle" id=""><%= piadina.getName() %></td>
+										<td class="col align-middle"><%= piadina.getDough().getType() %></td>
+										<td class="col align-middle"><%= piadina.getMeatBase().stream().map(MeatBase::getType).collect(Collectors.joining(", ")) %></td>
+										<td class="col align-middle"><%= piadina.getSauces().stream().map(Sauces::getType).collect(Collectors.joining(", ")) %></td>
+										<td class="col align-middle"><%= piadina.getOptionalElements().stream().map(OptionalElements::getType).collect(Collectors.joining(", ")) %></td>
+										<td class="col align-middle text-nowrap"><%= String.format("&euro; %.2f", piadina.getPrice()) %></td>
+										<td class="col align-middle"><%= piadina.getEmployee().getName() + " " + piadina.getEmployee().getSurname() %></td>
 										<td class="col align-middle">
 											<div class="d-flex justify-content-center">
-												<button id="removePiadinaBtn" data-name="<%= piadinaEJB.getName() %>" onclick="remove(this)">Remove</button>
+												<button id="removePiadinaBtn" data-name="<%= piadina.getName() %>" onclick="remove(this)">Remove</button>
 											</div>
 										</td>
 									</tr>

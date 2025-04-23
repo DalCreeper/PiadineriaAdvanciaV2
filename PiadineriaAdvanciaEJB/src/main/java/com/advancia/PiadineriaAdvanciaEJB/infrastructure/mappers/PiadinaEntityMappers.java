@@ -1,9 +1,9 @@
 package com.advancia.PiadineriaAdvanciaEJB.infrastructure.mappers;
 
-import com.advancia.PiadineriaAdvanciaEJB.domain.model.classes.PiadinaDeserializeEJB;
-import com.advancia.PiadineriaAdvanciaEJB.domain.model.classes.PiadinaEJB;
-import com.advancia.PiadineriaAdvanciaEJB.infrastructure.model.classes.PiadinaDeserializeEntity;
-import com.advancia.PiadineriaAdvanciaEJB.infrastructure.model.classes.PiadinaEntity;
+import com.advancia.PiadineriaAdvanciaEJB.domain.model.PiadinaDeserializeEJB;
+import com.advancia.PiadineriaAdvanciaEJB.domain.model.PiadinaEJB;
+import com.advancia.PiadineriaAdvanciaEJB.infrastructure.model.PiadinaDeserializeEntity;
+import com.advancia.PiadineriaAdvanciaEJB.infrastructure.model.PiadinaEntity;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 

@@ -1,9 +1,6 @@
 <!DOCTYPE html>
-<%@ page import="com.advancia.PiadineriaAdvanciaEJB.domain.model.classes.EmployeeEJB"%>
-<%@ page import="com.advancia.PiadineriaAdvanciaEJB.infrastructure.model.classes.DoughEntity"%>
-<%@ page import="com.advancia.PiadineriaAdvanciaEJB.infrastructure.model.classes.MeatBaseEntity"%>
-<%@ page import="com.advancia.PiadineriaAdvanciaEJB.infrastructure.model.classes.SaucesEntity"%>
-<%@ page import="com.advancia.PiadineriaAdvanciaEJB.infrastructure.model.classes.OptionalElementsEntity"%>
+<%@ page import="com.advancia.PiadineriaAdvanciaWEB.application.model.*"%>
+<%@ page import="com.advancia.PiadineriaAdvanciaEJB.infrastructure.model.*"%>
 <%@ page import="java.util.Set"%>
 <html lang="en">
 <head>
@@ -34,10 +31,10 @@
 			<%
 				Set<DoughEntity> doughs = (Set<DoughEntity>) request.getAttribute("doughs");
 			 	if(doughs != null) {
-					for(DoughEntity doughEJB : doughs) {
+					for(DoughEntity dough : doughs) {
 			%>
-						<div class="chip" onclick="toggleChipSelection('doughEJB', this, 1)" data-id="<%= doughEJB.getId() %>" data-price="<%= doughEJB.getPrice() %>">
-					        <span class="chip-label prevent-select"><%= doughEJB.getType() %></span>
+						<div class="chip" onclick="toggleChipSelection('dough', this, 1)" data-id="<%= dough.getId() %>" data-price="<%= dough.getPrice() %>">
+					        <span class="chip-label prevent-select"><%= dough.getType() %></span>
 					    </div>
 			<%
 					}
@@ -52,7 +49,7 @@
 				if(mBases != null) {
 					for(MeatBaseEntity mBase : mBases) {
 			%>
-						<div class="chip" onclick="toggleChipSelection('meatBaseEJB', this, 2)" data-id="<%= mBase.getId() %>" data-price="<%= mBase.getPrice() %>">
+						<div class="chip" onclick="toggleChipSelection('meatBase', this, 2)" data-id="<%= mBase.getId() %>" data-price="<%= mBase.getPrice() %>">
 					        <span class="chip-label prevent-select"><%= mBase.getType() %></span>
 					    </div>
 			<%
@@ -64,11 +61,11 @@
 			<label>Sauces (max 2):</label>
 			<div class="chips-container" id="saucesContainer">
 			<%
-				Set<SaucesEntity> saucesEJB = (Set<SaucesEntity>) request.getAttribute("saucesEJB");
-				if(saucesEJB != null) {
-					for(SaucesEntity sauce : saucesEJB) {
+				Set<SaucesEntity> sauces = (Set<SaucesEntity>) request.getAttribute("sauces");
+				if(sauces != null) {
+					for(SaucesEntity sauce : sauces) {
 			%>
-						<div class="chip" onclick="toggleChipSelection('saucesEJB', this, 2)" data-id="<%= sauce.getId() %>" data-price="<%= sauce.getPrice() %>">
+						<div class="chip" onclick="toggleChipSelection('sauces', this, 2)" data-id="<%= sauce.getId() %>" data-price="<%= sauce.getPrice() %>">
 					        <span class="chip-label prevent-select"><%= sauce.getType() %></span>
 					    </div>
 			<%
@@ -99,7 +96,7 @@
 			</div>
 			<label for="addedBy">Added By:</label>
 			<%
-				EmployeeEJB user = (session != null) ? (EmployeeEJB) session.getAttribute("user") : null;
+				Employee user = (session != null) ? (Employee) session.getAttribute("user") : null;
 				if(user != null) {
 			%>
 					<span id="user"><%= user.getUsername() %></span>

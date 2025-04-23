@@ -1,9 +1,9 @@
 package com.advancia.PiadineriaAdvanciaEJB.domain.services;
 
-import com.advancia.PiadineriaAdvanciaEJB.domain.model.classes.DoughEJB;
-import com.advancia.PiadineriaAdvanciaEJB.domain.model.classes.MeatBaseEJB;
-import com.advancia.PiadineriaAdvanciaEJB.domain.model.classes.OptionalElementsEJB;
-import com.advancia.PiadineriaAdvanciaEJB.domain.model.classes.SaucesEJB;
+import com.advancia.PiadineriaAdvanciaEJB.domain.model.DoughEJB;
+import com.advancia.PiadineriaAdvanciaEJB.domain.model.MeatBaseEJB;
+import com.advancia.PiadineriaAdvanciaEJB.domain.model.OptionalElementsEJB;
+import com.advancia.PiadineriaAdvanciaEJB.domain.model.SaucesEJB;
 
 import java.util.Map;
 import java.util.Set;

@@ -1,11 +1,11 @@
 package com.advancia.PiadineriaAdvanciaEJB.infrastructure.services.impl;
 
 import com.advancia.PiadineriaAdvanciaEJB.infrastructure.dao.piadina.PiadinaDao;
-import com.advancia.PiadineriaAdvanciaEJB.domain.model.classes.PiadinaEJB;
+import com.advancia.PiadineriaAdvanciaEJB.domain.model.PiadinaEJB;
 import com.advancia.PiadineriaAdvanciaEJB.domain.repository.PiadinaDaoService;
 import com.advancia.PiadineriaAdvanciaEJB.domain.exceptions.DBException;
 import com.advancia.PiadineriaAdvanciaEJB.infrastructure.mappers.PiadinaEntityMappers;
-import com.advancia.PiadineriaAdvanciaEJB.infrastructure.model.classes.PiadinaEntity;
+import com.advancia.PiadineriaAdvanciaEJB.infrastructure.model.PiadinaEntity;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;

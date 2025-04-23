@@ -1,7 +1,7 @@
 package com.advancia.PiadineriaAdvanciaEJB.infrastructure.mappers;
 
-import com.advancia.PiadineriaAdvanciaEJB.domain.model.classes.MeatBaseEJB;
-import com.advancia.PiadineriaAdvanciaEJB.infrastructure.model.classes.MeatBaseEntity;
+import com.advancia.PiadineriaAdvanciaEJB.domain.model.MeatBaseEJB;
+import com.advancia.PiadineriaAdvanciaEJB.infrastructure.model.MeatBaseEntity;
 import org.mapstruct.Mapper;
 
 @Mapper

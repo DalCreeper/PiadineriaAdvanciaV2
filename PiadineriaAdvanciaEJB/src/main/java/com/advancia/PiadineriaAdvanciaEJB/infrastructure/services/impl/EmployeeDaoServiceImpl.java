@@ -6,12 +6,12 @@ import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.persistence.*;
 
-import com.advancia.PiadineriaAdvanciaEJB.domain.model.classes.EmployeeEJB;
+import com.advancia.PiadineriaAdvanciaEJB.domain.model.EmployeeEJB;
 import com.advancia.PiadineriaAdvanciaEJB.domain.repository.EmployeeDaoService;
 import com.advancia.PiadineriaAdvanciaEJB.domain.exceptions.DBException;
 import com.advancia.PiadineriaAdvanciaEJB.infrastructure.dao.user.EmployeeDao;
 import com.advancia.PiadineriaAdvanciaEJB.infrastructure.mappers.UserEntityMappers;
-import com.advancia.PiadineriaAdvanciaEJB.infrastructure.model.classes.EmployeeEntity;
+import com.advancia.PiadineriaAdvanciaEJB.infrastructure.model.EmployeeEntity;
 
 @Stateless
 public class EmployeeDaoServiceImpl implements EmployeeDaoService {

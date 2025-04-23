@@ -1,7 +1,7 @@
 package com.advancia.PiadineriaAdvanciaEJB.domain.services.impl;
 
 import com.advancia.PiadineriaAdvanciaEJB.domain.repository.PiadinaDaoService;
-import com.advancia.PiadineriaAdvanciaEJB.domain.model.classes.PiadinaEJB;
+import com.advancia.PiadineriaAdvanciaEJB.domain.model.PiadinaEJB;
 import com.advancia.PiadineriaAdvanciaEJB.domain.services.PiadinaService;
 
 import javax.ejb.EJB;

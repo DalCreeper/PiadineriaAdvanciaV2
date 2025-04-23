@@ -1,8 +1,7 @@
 package com.advancia.PiadineriaAdvanciaEJB.infrastructure.dao.piadinacomponents;
 
 import com.advancia.PiadineriaAdvanciaEJB.domain.exceptions.DBException;
-import com.advancia.PiadineriaAdvanciaEJB.domain.model.classes.OptionalElementsEJB;
-import com.advancia.PiadineriaAdvanciaEJB.infrastructure.model.classes.OptionalElementsEntity;
+import com.advancia.PiadineriaAdvanciaEJB.infrastructure.model.OptionalElementsEntity;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;

@@ -1,6 +1,6 @@
 package com.advancia.PiadineriaAdvanciaEJB.domain.services;
 
-import com.advancia.PiadineriaAdvanciaEJB.domain.model.classes.PiadinaEJB;
+import com.advancia.PiadineriaAdvanciaEJB.domain.model.PiadinaEJB;
 
 import java.util.List;
 

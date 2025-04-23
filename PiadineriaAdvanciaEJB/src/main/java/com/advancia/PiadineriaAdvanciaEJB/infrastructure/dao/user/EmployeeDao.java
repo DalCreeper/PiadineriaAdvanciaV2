@@ -4,7 +4,7 @@ import javax.ejb.Stateless;
 import javax.persistence.*;
 
 import com.advancia.PiadineriaAdvanciaEJB.domain.exceptions.DBException;
-import com.advancia.PiadineriaAdvanciaEJB.infrastructure.model.classes.EmployeeEntity;
+import com.advancia.PiadineriaAdvanciaEJB.infrastructure.model.EmployeeEntity;
 
 import java.util.List;
 

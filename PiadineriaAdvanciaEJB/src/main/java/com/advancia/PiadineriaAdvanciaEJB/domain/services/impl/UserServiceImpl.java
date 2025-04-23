@@ -6,7 +6,7 @@ import javax.ejb.EJB;
 import javax.ejb.Stateless;
 
 import com.advancia.PiadineriaAdvanciaEJB.domain.repository.EmployeeDaoService;
-import com.advancia.PiadineriaAdvanciaEJB.domain.model.classes.EmployeeEJB;
+import com.advancia.PiadineriaAdvanciaEJB.domain.model.EmployeeEJB;
 import com.advancia.PiadineriaAdvanciaEJB.domain.services.UserService;
 
 @Stateless

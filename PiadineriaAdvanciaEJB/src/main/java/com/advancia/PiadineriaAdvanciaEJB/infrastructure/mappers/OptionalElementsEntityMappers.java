@@ -1,7 +1,7 @@
 package com.advancia.PiadineriaAdvanciaEJB.infrastructure.mappers;
 
-import com.advancia.PiadineriaAdvanciaEJB.domain.model.classes.OptionalElementsEJB;
-import com.advancia.PiadineriaAdvanciaEJB.infrastructure.model.classes.OptionalElementsEntity;
+import com.advancia.PiadineriaAdvanciaEJB.domain.model.OptionalElementsEJB;
+import com.advancia.PiadineriaAdvanciaEJB.infrastructure.model.OptionalElementsEntity;
 import org.mapstruct.Mapper;
 
 @Mapper
