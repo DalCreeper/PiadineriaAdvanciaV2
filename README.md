@@ -6,3 +6,6 @@ Un venditore di piadine ha richiesto la creazione di un sito in cui i propri dip
 ---
 
 ## Versione più moderna di PiadineriaAdvancia -> [https://github.com/DalCreeper/PiadineriaAdvancia]
+In questo progetto è presente l'intero applicativo PiadineriaAdvancia, ma è stata cambiata l'architettura da MVC ad esagonale, inoltre al posto di Tomcat è stato utilizzato WildFly/Jboss per poter sfruttare gli EJB.
+
+---
